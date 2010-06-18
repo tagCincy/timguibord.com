@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app 
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" 
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<servlet>
+		<servlet-name>weatherWidgetServiceImpl</servlet-name>
+		<servlet-class>com.timguibord.widgets.server.WeatherWidgetServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>weatherWidgetServiceImpl</servlet-name>
+		<url-pattern>/com.timguibord.web.Home/weather</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>Home.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

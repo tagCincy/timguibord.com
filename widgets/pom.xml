@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>main</artifactId>
+    <groupId>com.timguibord</groupId>
+    <version>1.0-ALPHA-1</version>
+  </parent>
+  <groupId>com.timguibord</groupId>
+  <artifactId>widgets</artifactId>
+  <version>1.0-ALPHA-1</version>
+  <name>TimGuibord.com GWT Widgets</name>
+  	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<configuration>
+					<module>com.timguibord.widgets.Widgets</module>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>resources</goal>
+							<!--<goal>compile</goal> -->
+							<!--<goal>generateAsync</goal>-->
+							<!--<goal>test</goal>-->
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<executable>C:\Program Files\Java\jdk1.6.0_03\bin</executable>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.google.gwt</groupId>
+  		<artifactId>gwt-user</artifactId>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.google.gwt</groupId>
+  		<artifactId>gwt-servlet</artifactId>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.timguibord</groupId>
+  		<artifactId>backend</artifactId>
+  		<version>1.0-ALPHA-1</version>
+  		<type>jar</type>
+  		<scope>compile</scope>
+  	</dependency>
+  </dependencies>
+</project>
